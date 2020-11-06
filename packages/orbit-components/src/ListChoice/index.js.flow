@@ -13,6 +13,7 @@ export type Props = {|
   +selectable?: boolean,
   +selected?: boolean,
   +disabled?: boolean,
+  +tabIndex?: number,
   +icon?: React.Node,
   +onClick?: (
     e: SyntheticEvent<HTMLDivElement> | SyntheticKeyboardEvent<HTMLElement>,
