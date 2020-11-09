@@ -39,6 +39,9 @@ const TooltipPrimitive = ({
   dataTest,
   size = SIZE_OPTIONS.SMALL,
   content,
+  error,
+  help,
+  tooltipShown,
   preferredPosition,
   preferredAlign,
   stopPropagation = false,
@@ -81,6 +84,12 @@ const TooltipPrimitive = ({
     setRenderWithTimeout(false);
   }, [setRenderWithTimeout]);
 
+  React.useEffect(() => {
+    if (tooltipShown) {
+      handleIn();
+    }
+  });
+
   if (!enabled) return children;
 
   return (
@@ -106,6 +115,8 @@ const TooltipPrimitive = ({
             dataTest={dataTest}
             shown={shown}
             size={size}
+            error={error}
+            help={help}
             tooltipId={tooltipId}
             onClose={handleOut}
             onCloseMobile={handleOutMobile}

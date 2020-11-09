@@ -22,8 +22,9 @@ const FormFeedback = ({
       {help && !helpClosed && !error && (
         <FormFeedbackTooltip
           dataTest={dataTest}
-          isHelp
-          shown
+          tooltipShown={tooltipShown}
+          prefferedPosition="top"
+          help={help}
           boundingRef={labelRef}
           iconBoundingRef={iconRef}
           inlineLabel={inlineLabel}
@@ -35,7 +36,9 @@ const FormFeedback = ({
       {(tooltipShown || tooltipShownHover) && error && (
         <FormFeedbackTooltip
           dataTest={dataTest}
-          shown
+          tooltipShown={tooltipShown}
+          prefferedPosition="top"
+          error={error}
           boundingRef={labelRef}
           iconBoundingRef={iconRef}
           inlineLabel={inlineLabel}

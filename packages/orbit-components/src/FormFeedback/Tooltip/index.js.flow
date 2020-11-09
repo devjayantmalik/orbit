@@ -22,7 +22,8 @@ export type Dimensions = {
 export type Props = {
   children: React.Node,
   shown?: boolean,
-  isHelp?: boolean,
+  error?: boolean,
+  help?: boolean,
   boundingRef?: RefType,
   iconBoundingRef?: RefType,
   inlineLabel?: boolean,

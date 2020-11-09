@@ -1,10 +1,12 @@
 // @flow
 import type { Interpolation } from "styled-components";
 
-import type { Position } from "../index";
 import type { ThemeProps } from "../../../defaultTheme";
+import type { Position } from "../index";
 
 export type Props = {
+  error: boolean,
+  help: boolean,
   ...Position,
   ...ThemeProps,
 };
